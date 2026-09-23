@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* ADS Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 120 100% 8%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 120 100% 8%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 120 100% 8%;
+    
+    /* ADS Primary - Dark Green #004D00 */
+    --primary: 120 100% 8%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* ADS Secondary - Bright Green #009900 */
+    --secondary: 120 100% 20%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 120 20% 95%;
+    --muted-foreground: 120 100% 25%;
+    
+    /* ADS Accent - Deep Blue for vision/wisdom */
+    --accent: 210 100% 25%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* ADS Red - Warm Red for boldness/impact */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 120 30% 90%;
+    --input: 120 30% 90%;
+    --ring: 120 100% 20%;
+    
+    /* ADS Custom Colors */
+    --ads-green-dark: 120 100% 8%;
+    --ads-green-bright: 120 100% 20%;
+    --ads-green-light: 120 50% 85%;
+    --ads-blue-deep: 210 100% 25%;
+    --ads-blue-light: 210 50% 85%;
+    --ads-red-warm: 0 75% 55%;
+    --ads-red-light: 0 50% 85%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--ads-green-dark)), hsl(var(--ads-green-bright)));
+    --gradient-africa: linear-gradient(135deg, hsl(var(--ads-green-bright)), hsl(var(--ads-blue-deep)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--ads-green-dark)) 0%, hsl(var(--ads-green-bright)) 50%, hsl(var(--ads-blue-deep)) 100%);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 120 100% 3%;
+    --foreground: 0 0% 95%;
+    
+    --card: 120 50% 5%;
+    --card-foreground: 0 0% 95%;
+    
+    --popover: 120 50% 5%;
+    --popover-foreground: 0 0% 95%;
+    
+    --primary: 120 100% 20%;
+    --primary-foreground: 120 100% 3%;
+    
+    --secondary: 120 100% 8%;
+    --secondary-foreground: 0 0% 95%;
+    
+    --muted: 120 50% 8%;
+    --muted-foreground: 120 20% 70%;
+    
+    --accent: 210 100% 40%;
+    --accent-foreground: 0 0% 95%;
+    
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 95%;
+    
+    --border: 120 30% 15%;
+    --input: 120 30% 15%;
+    --ring: 120 100% 20%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
