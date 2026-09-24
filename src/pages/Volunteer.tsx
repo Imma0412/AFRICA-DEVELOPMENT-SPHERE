@@ -53,7 +53,8 @@ const Volunteer = () => {
         description="Join our community of volunteers helping to build Africa's future. We run a mix of experienced and developing volunteers — experienced volunteers lead, while those growing their skills gain hands-on experience and portfolio credit."
         primaryCTA={{
           text: 'Apply to Volunteer',
-          href: 'https://forms.gle/k7ENF6tZpivghMA99'
+          href: 'https://forms.gle/k7ENF6tZpivghMA99',
+          isExternal: true
         }}
         secondaryCTA={{
           text: 'See Our Next Event',

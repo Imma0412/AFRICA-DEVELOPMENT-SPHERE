@@ -9,11 +9,13 @@ interface HeroSectionProps {
   primaryCTA?: {
     text: string;
     href: string;
+    isExternal?: boolean;
   };
   secondaryCTA?: {
     text: string;
     href: string;
     isVideo?: boolean;
+    isExternal?: boolean;
   };
   backgroundPattern?: boolean;
   gradient?: 'primary' | 'africa' | 'hero';
@@ -99,7 +101,10 @@ const HeroSection = ({
                   variant="secondary"
                   className="text-lg px-8 py-4 group"
                 >
-                  <a href={primaryCTA.href}>
+                  <a   href={primaryCTA.href}
+                      target={primaryCTA.isExternal ? '_blank' : undefined}
+                      rel={primaryCTA.isExternal ? 'noopener noreferrer' : undefined}
+                   >
                     {primaryCTA.text}
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </a>
@@ -113,7 +118,10 @@ const HeroSection = ({
                   variant="outline"
                   className="text-lg px-8 py-4 border-white/30 text-green-800 hover:bg-white/10 hover:text-white group"
                 >
-                  <a href={secondaryCTA.href}>
+                  <a href={secondaryCTA.href}
+                    target={secondaryCTA.isExternal ? '_blank' : undefined}
+                    rel={secondaryCTA.isExternal ? 'noopener noreferrer' : undefined}
+                  >
                     {secondaryCTA.isVideo && (
                       <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                     )}
